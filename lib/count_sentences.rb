@@ -18,11 +18,7 @@ class String
     self_arr = self.split
     count = 0
     self_arr.each do |str|
-      if str.sentence?
-        count += 1
-      elsif str.question?
-        count += 1
-      elsif str.exclamation?
+      if str.sentence? || str.question? || str.exclamation?
         count += 1
       end
     end
